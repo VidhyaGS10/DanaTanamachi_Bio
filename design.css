@@ -1,0 +1,244 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    padding: 20px 80px;
+  }
+  
+  /* .cell {
+    background: #e66e65;
+    height: 100px;
+  } */
+  
+  .col1 {
+    grid-column-end: span 12;  
+  }
+  
+  .col2 {
+    grid-column-end: span 6;
+  }
+  
+  .col3 {
+    grid-column-end: span 4;
+  }
+  
+  .col4 {
+    grid-column-end: span 3;
+  }
+  
+  .col6 {
+    grid-column-end: span 2;
+  }
+  
+  .col12 {
+    grid-column-end: span 1;
+  }
+
+.listItems{
+    list-style: none;
+    padding: 10px 40px;
+    font-size: 4rem;
+    font-family: 'Merriweather Sans', sans-serif;
+    line-height: 5rem;
+}
+
+.featuredText{
+  height: 80vh;
+  background: url(img/DanaTanamachi_Portrait.png) center center no-repeat fixed;
+  background-size: cover;
+  background-color: rgb(0, 0, 0);
+  display: grid;
+  padding-bottom: 20px;
+}
+
+.nameHead{
+    font-family: GrutchShaded;
+    color: white;
+    font-size: 5rem;
+    padding: 10px 45px;
+    text-align: left;
+  }
+
+@font-face {
+    font-family: 'GrutchShaded';
+    src: url('GrutchShaded.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.quote{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 3.65rem;
+    color: #9B4136;
+}
+
+.quoteHead{
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 60px 100px 20px 100px;
+}
+
+.author{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Merriweather Sans', sans-serif;
+    padding: 20px 5px;
+    font-weight: 100;
+}
+
+.writeUp{
+    font-family: 'Merriweather Sans', sans-serif;
+    /* column-count: 2; */
+    /* padding: 30px 70px 0px 70px; */
+    text-align: left;
+    margin: 0;
+    line-height: 53px;
+    font-size: 1.45rem;
+    /* column-gap: 30px; */
+    font-weight: 300;
+    column-width: 425px;
+}
+
+.rsp{
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    margin: auto auto;
+}
+
+.imagesRsp{
+    align-items: center;
+    display: grid;
+}
+
+p{
+    margin: 0;
+}
+
+.bottomWriteUp{
+  font-family: 'Merriweather Sans', sans-serif;
+  /* padding: 30px 70px 0px 70px; */
+  text-align: left;
+  margin: 0;
+  line-height: 55px;
+  font-size: 1.55rem;
+  /* column-gap: 30px; */
+  font-weight: 300;
+}
+
+/* Sourced Codes for the hamburger Menu starts*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --bar-width: 80px;
+  --bar-height: 10px;
+  --hamburger-gap: 6px;
+  --foreground: #1d1d1d;
+  --background: white;
+  --hamburger-margin: 40px;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+.hamburger-menu {
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: max-content;
+  position: absolute;
+  top: var(--hamburger-margin);
+  left: var(--hamburger-margin);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.hamburger-menu:has(input:checked) {
+  --foreground: white;
+  --background: #1d1d1d;
+}
+
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+  border: 1px solid var(--background);
+  box-shadow: 0 0 0 1px var(--foreground);
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground);
+  border-radius: 9999px;
+  transform-origin: left center;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
+}
+
+.hamburger-menu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+.sidebar {
+  transition: translate var(--animation-timing);
+  translate: -100%;
+  padding: 0.5rem 1rem;
+  padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+  background-color: var(--foreground);
+  color: var(--background);
+  max-width: 40rem;
+  min-height: 100vh;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar {
+  translate: 0;
+}
+
+/* Sourced code ends */
+
+.footer{
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: #fff;
+  display: inline-block;
+  transition: all 0.7s;
+}

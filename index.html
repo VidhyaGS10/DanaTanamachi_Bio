@@ -4,51 +4,91 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="design.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <title>Dana Tanamachi</title>
 </head>
 <body>
-    <header>
-        <div class="nameHead">Dana Tanamachi</div>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Analysis</li>
-                <li>Works</li>
-                <li>Process</li>
-            </ul>   
-        </nav>
+    <header >
+        <div class="featuredText">
+            <label class="hamburger-menu">
+                <input type="checkbox" />
+            </label>
+            <aside class="sidebar">
+                <div class="nameHead">DANA TANAMACHI</div>
+                <nav>
+                    <ol class="listItems">
+                    <li><a href="index.html" class="currentPage"></a>Home</li>
+                    <li><a href="analysis.html"></a>Analysis</li>
+                    <li><a href="works.html"></a>Works</li>
+                    <li><a href="process.html"></a>Process</li>
+                    </ol>   
+                </nav>
+            </aside>
+        </div>
     </header>
     <div class="grid">
-        <div><span class="quote"> You drive through the river; it’s kind of this magical thing where 
-        you emerge out on the other side—it’s a good symbol of just being open...</span> 
-        By Dana Tanamachi</div>
-        <div>
-            <p> Dana Tanamachi is a Brooklyn, New York based lettering artist, typographer, illustrator, and chalk artist. 
-            Graduated with a Graphic Design degree from the University of North Texas in 2007, Dana started her journey 
-            as a chalking artist back in the summer of 2007. 
-            </p>
-
-            <img src="img/DanaTanamachi_Portrait_2.jpg" alt="image from laitylodge.org">
-
+        <div class="cell col1">
+            <div class="quoteHead"><span class="quote"> You drive through the river; it’s kind of this magical thing where 
+                you emerge out on the other side—it’s a good symbol of just being open...</span> </div>
+                <div class="author"> — DANA TANAMACHI </div>
+        </div>
+        <div class="cell col2">
+            <div class="writeUp">
+                <p> Dana Tanamachi is a Brooklyn, New York based lettering artist, typographer, illustrator, and chalk artist. 
+                    Graduated with a Graphic Design degree from the University of North Texas in 2007, Dana started her journey 
+                    as a chalking artist back in the summer of 2007. 
+                </p>
+            </div>
+        </div>
+        <div class="cell col2 writeUp">
+                <p>
+                    Dana has been always inclined towards typography and the power of using type to create type heavy compositions. 
+                    Having an in-depth understanding of the typography Dana through personal projects explored into the realm of the 
+                    chalk medium attracting big brands such as Google, Ralph Lauren, O Magazine.
+                </p>
+        </div>
+        <div class="cell col2 imagesRsp pic3">
+            <img src="img/DanaTanamachi_Portrait_3.jpg" alt="Portrait 3" class="rsp">
+        </div>
+        <div class="cell col2 writeUp">
             <p>
-            Dana has been always inclined towards typography and the power of using type to create type heavy compositions. 
-            Having an in-depth understanding of the typography Dana through personal projects explored into the realm of the 
-            chalk medium attracting big brands such as Google, Ralph Lauren, O Magazine.
+                Dana Tanamachi is an important typographer because of her interesting compositions using the chalk medium 
+                within the everyday spaces making type more accessible to everyday man and woman. Dana’s style is highly 
+                influenced by the Art Nouveau style from the late 19th - early 20th century period. The Art Nouveau style 
+                is identified with the use of organic shapes, curvy font styles that integrate within each other, and a 
+                strong sense of borders within the designs. 
+                Dana also evokes active reference to childhood, a feeling of nostalgia and warmth, through the chalk medium. 
             </p>
         </div>
-    <div>Ending Images</div>
-    <div>Image Credits</div>
-
-    <footer>
-        <ul>
-            <li>Home</li>
-            <li>Analysis</li>
-            <li>Works</li>
-            <li>Process</li>
-        </ul>
-    </footer>
-
-    <script src="script.js"></script>
+        <div class="cell col1">
+            <div class="bottomWriteUp">
+                Her art pieces are influences by transitional typefaces such as Baskerville, with the strong use of brackets, and 
+                clarendon, with the heavy stroke width and tight bracketed slab serifs. The typeface and the organic shapes together 
+                make it a cohesive typographic art piece with interesting compositions.
+            </div>
+        </div>
+        <div class="cell col2 imagesRsp pic2">
+            <img src="img/DanaTanamachi_Portrait_2.jpg" alt="image from laitylodge.org" class="rsp">
+        </div>
+        <div class="cell col2 imagesRsp pic4">
+            <img src="img/DanaTanamachi_Portrait_4.jpg" alt="Portrait 4" class="rsp">
+        </div>
+        <div class="cell col1">
+            --
+            <br> from laitylodge.org
+        </div>
+        <footer class="footer">
+            <ul class="listItems">
+                <li><a href="index.html" class="currentPage"></a>Home</li>
+                <li><a href="analysis.html"></a>Analysis</li>
+                <li><a href="works.html"></a>Works</li>
+                <li><a href="process.html"></a>Process</li>
+            </ul>
+        </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
