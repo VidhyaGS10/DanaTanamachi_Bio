@@ -1,6 +1,11 @@
 html, body{
     margin: 0;
     padding: 0;
+    background: url(img/Background.png) center center no-repeat fixed;
+    background-size: cover;
+    position: relative;
+    z-index: -3;
+    background-
 }
 
 .grid {
@@ -83,6 +88,8 @@ html, body{
     font-size: 1.3rem;
     text-align: center;
     padding: 60px 100px 20px 100px;
+    position: relative;
+    z-index: -1;
 }
 
 .author{
@@ -130,6 +137,27 @@ p{
   font-size: 1.47rem;
   /* column-gap: 30px; */
   font-weight: 200;
+}
+
+.position{
+  position: relative;
+}
+
+.opening{
+  transform: rotate(180deg);
+  align-items: start;
+  position: absolute;
+  left: 35;
+  top: -45;
+  z-index: -2;
+}
+
+.closing{
+  align-items: end;
+  position: absolute;
+  right: 50;
+  top: 145;
+  z-index: -2;
 }
 
 /* Sourced Codes for the hamburger Menu starts*/
@@ -274,8 +302,26 @@ a{
   padding-bottom: 20px;
 }
 
+.featuredTextFooter{
+  height: 50vh;
+  background: url(img/Process_1.png) center center no-repeat fixed;
+  background-size: cover;
+  background-color: rgb(0, 0, 0);
+  display: grid;
+  padding-bottom: 20px;
+}
+
 .currentPage{
   text-decoration: underline;
   font-style: italic;
   font-weight: 800;
+}
+
+#myProcessDoc{
+  width: 90%;
+  height: 975px;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+  align-content: center;
 }
